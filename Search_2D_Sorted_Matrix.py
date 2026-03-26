@@ -45,7 +45,7 @@ def searchMatrix(matrix, target):
             return True
         
         # if target lies in the current row
-        if target < matrix[cur_row][last_idx]:
+        if target > matrix[cur_row][last_idx] and target < matrix[cur_row][last_idx]:
             return b_search(matrix[cur_row], target)
 
         # go to next row
